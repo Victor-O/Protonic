@@ -1,0 +1,28 @@
+<div class="molecularCalculator">
+    <div class="molecularCalculatorContainer">
+        <div class="inputContainer">
+            <div class="formulaInput">
+                <div class="formulaTitle">Molecular Mass</div>
+                <div class="inputRow">
+                    <div>
+                        <input id="inputValue" ng-model="vm.inputValue" type="text">
+                    </div>
+                    <div>
+                        <button class="btn btn-info" ng-click="vm.calculateMolecularMass()">Calculate Mass</button>
+                    </div>
+                </div>
+                <div class="formulaTitle">The Mass is: {{vm.theMolecularMass}}</div>
+                <div class="formulaTitle" ng-class="vm.showError === true ? 'showError' : 'hideError'">
+                    The formula used is not correct!
+                </div>
+            </div>
+        </div>
+
+
+        <div class="infoContainer">
+            <div class="infoTitle">Info</div>
+            <div class="infoLine">You can use nested brackets as long as all are round brackets</div>
+            <div class="infoLine">Examples of formulas: H2O, CH3CH2OH, Ca(OOCC6H4OCOCH3)2, (Co(NH3)6)Cl3</div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div ng-controller="NavBarController as vm">
+    <div ng-show="$root.showNavbar">
+
+        <div class="navbar navbar-default">
+
+            <div class="container-fluid" style="background-color: #9AC0CD;">
+                <div class="navbar-header">
+                    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand" style="color: black">Protonic</a>
+                    <img src="../../../../../Protonic/src/app/common/images/atomt.png" alt="" style="height: 50px; width: 75px">
+                </div>
+
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav" >
+                        <li><a ui-sref="molecularCalculator" style="color: black">Molecular Calculator</a></li>
+                        <li><a ui-sref="quickReference" style="color: black">Quick Reference</a></li>
+                        <li><a ui-sref="periodicTable" style="color: black">Periodic Table</a></li>
+                        <li><a ui-sref="solutionTools" style="color: black">Solution Tools</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><span class="navbar-brand" style="color: black">{{$root.title}}</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

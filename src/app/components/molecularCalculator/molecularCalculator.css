@@ -1,0 +1,94 @@
+.molecularCalculator {
+    height: 80vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+.molecularCalculator .molecularCalculatorContainer {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer {
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer .formulaInput {
+    width: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer .formulaInput .formulaTitle {
+    font-size: 18px;
+    padding: 16px; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer .formulaInput .inputRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer .formulaInput .inputRow #inputValue {
+    font-size: 16px;
+    height: 35px;
+    width: 350px;
+    border-radius: 8px;
+    margin-right: 16px; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer .formulaInput .inputRow button {
+    max-height: 35px; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer .formulaInput .showError {
+    color: red;
+    font-weight: 600; }
+.molecularCalculator .molecularCalculatorContainer .inputContainer .formulaInput .hideError {
+    color: white; }
+.molecularCalculator .molecularCalculatorContainer .infoContainer {
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+.molecularCalculator .molecularCalculatorContainer .infoContainer .infoTitle {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px; }
+.molecularCalculator .molecularCalculatorContainer .infoContainer .infoLine {
+    font-size: 16px;
+    padding: 8px 16px; }

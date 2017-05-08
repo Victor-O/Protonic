@@ -1,0 +1,102 @@
+<div class="PeriodicTable">
+    <div class="tableExtendedContainer">
+        <div class="emptySpace"></div>
+        <div class="buttons-container">
+            <div class="buttons-row">
+                <button class="buttons-item btn btn-sm btn-info" ng-click="vm.changeDisplayProperty('type')">Type</button>
+            </div>
+            <div class="buttons-row">
+                <button class="buttons-item btn btn-sm btn-info" ng-click="vm.changeDisplayProperty('phase')">Phase</button>
+            </div>
+            <div class="buttons-row">
+                <button class="buttons-item btn btn-sm btn-info" ng-click="vm.changeDisplayProperty('electronegativity')">Electronegativity
+                </button>
+            </div>
+            <div class="buttons-row">
+                <button class="buttons-item btn btn-sm btn-info" ng-click="vm.changeDisplayProperty('electroconfig')">Electron Configuration
+                </button>
+            </div>
+        </div>
+
+        <div class="tableContainer">
+            <h4 class="text-center">Select an element to learn more about it</h4>
+            <div ng-repeat="elemArray in vm.elements" class="elements-row row">
+                <div ng-repeat="element in elemArray" class="chemicalElement"
+                     ng-class="vm.elementClass(element)" ng-click="vm.selectForDetails(element)">
+                    <div class="elementAtomicNumber text-center">{{element['Atomic Number']}}</div>
+                    <div class="elementSymbol text-center">{{element.Symbol}}</div>
+                    <div ng-show="element.Phase" class="elementWeight text-center">{{element['Atomic Weight'] |
+                        number:2}}
+                    </div>
+                    <div ng-show="vm.showElectroConfig" class="elementElectronConf text-center">{{element['Electron Configuration']}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legendContainer">
+            <div class="legend">
+                Legend:
+                <div ng-show="vm.typeLegend">
+                    <div class="row nonmetal legend-item">Non Metal</div>
+                    <div class="row nobleGas legend-item">Noble Gas</div>
+                    <div class="row alkaliMetal legend-item">Alkali Metal</div>
+                    <div class="row alkalineEarthMetal legend-item">Alkaline Earth Metal</div>
+                    <div class="row metalloid legend-item">Metalloid</div>
+                    <div class="row halogen legend-item">Halogen</div>
+                    <div class="row metal legend-item">Metal</div>
+                    <div class="row transitionMetal legend-item">Transition Metal</div>
+                    <div class="row transactinide legend-item">Transactinide</div>
+                    <div class="row lanthanide legend-item">Lanthanide</div>
+                    <div class="row actinide legend-item">Actinide</div>
+                </div>
+                <div ng-show="vm.phaseLegend">
+                    <div class="row gas legend-item">Gas</div>
+                    <div class="row liquid legend-item">Liquid</div>
+                    <div class="row solid legend-item">Solid</div>
+                    <div class="row artificial legend-item">Artificial</div>
+                </div>
+                <div ng-show="vm.electronegativityLegend">
+                    <div class="row electronegativity01 legend-item">Electronegativity between 0 and 0.99</div>
+                    <div class="row electronegativity12 legend-item">Electronegativity between 1 and 1.99</div>
+                    <div class="row electronegativity23 legend-item">Electronegativity between 2 and 2.99</div>
+                    <div class="row electronegativity34 legend-item">Electronegativity between 3 and 4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="elementFullDetails" ng-show="vm.selectedElem">
+    <div>
+        <div class="col-md-3">
+            <div>Name: {{vm.selectedElem.Element}}</div>
+            <div>Symbol: {{vm.selectedElem.Symbol}}</div>
+            <div>Atomic Number: {{vm.selectedElem['Atomic Number']}}</div>
+            <div>Atomic Weight: {{vm.selectedElem['Atomic Weight']}}</div>
+            <div>Period: {{vm.selectedElem.Period}}</div>
+            <div>Group: {{vm.selectedElem.Group}}</div>
+        </div>
+        <div class="col-md-3">
+            <div>Phase: {{vm.selectedElem.Phase}}</div>
+            <div>Most Stable Crystal: {{vm.selectedElem['Most Stable Crystal']}}</div>
+            <div>Type: {{vm.selectedElem.Type}}</div>
+            <div>Ionic Radius: {{vm.selectedElem['Ionic Radius']}}</div>
+            <div>Atomic Radius: {{vm.selectedElem['Atomic Radius']}}</div>
+        </div>
+        <div class="col-md-3">
+            <div>Electronegativity: {{vm.selectedElem.Electronegativity}}</div>
+            <div>First Ionization Potential: {{vm.selectedElem['First Ionization Potential']}}</div>
+            <div>Density: {{vm.selectedElem.Density}}</div>
+            <div>Melting Point (K): {{vm.selectedElem['Melting Point (K)']}}</div>
+            <div>Boiling Point (K): {{vm.selectedElem['Boiling Point (K)']}}</div>
+        </div>
+        <div class="col-md-3">
+            <div>Isotopes: {{vm.selectedElem.Isotopes}}</div>
+            <div>Discoverer: {{vm.selectedElem.Discoverer}}</div>
+            <div>Year of Discovery: {{vm.selectedElem['Year of Discovery']}}</div>
+            <div>Specific Heat Capacity: {{vm.selectedElem['Specific Heat Capacity']}}</div>
+            <div>Electron Configuration: {{vm.selectedElem['Electron Configuration']}}</div>
+        </div>
+    </div>
+</div>

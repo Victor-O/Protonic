@@ -1,0 +1,75 @@
+<div class="QuickReference">
+
+    <div class="quickReference-tabs col-md-offset-3">
+        <button class="btn btn-lg btn-info" ng-click="vm.showQuickReference()">Quick Reference</button>
+        <button class="btn btn-lg btn-info" ng-click="vm.showChemistryDictionary()">Chemistry Dictionary</button>
+        <button class="btn btn-lg btn-info" ng-click="vm.showChemicalCompounds()">Chemical Compounds</button>
+    </div>
+
+    <div class="QuickReference-Container" ng-show="vm.quickReference">
+        <div class="col-md-offset-2"><h3>Click on a topic to learn more about it</h3></div>
+        <div class="col-md-2 col-md-offset-2 QuickReference-Container-Titles">
+            <div ng-repeat="reference in vm.listOfReferences"
+                 ng-click="vm.showDetails(reference.desc, reference.details)">
+                <div class="QuickReference-Container-Titles-Items">{{ reference.title }}</div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div ng-show="vm.description" class="QuickReference-Container-Description">
+                <div ng-bind-html="vm.description"></div>
+            </div>
+            <div ng-show="vm.details">
+                <div ng-repeat="detail in vm.details" class="row QuickReference-Container-DetailRow">
+                    <div class="col-md-4 QuickReference-Container-Detail">
+                        <div ng-bind-html="detail.keyName"></div>
+                    </div>
+                    <div class="col-md-4 QuickReference-Container-Detail">
+                        <div ng-bind-html="detail.value"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="vm.chemistryDictionary">
+        <div class="chemDictionary row col-md-offset-4">
+            <span ng-repeat="item in vm.chemistryDictionaryLetterList"
+                  ng-click="vm.showWithLetter(item.letter)"
+                  class="chemDictionaryItem">
+                {{item.letter}}
+            </span>
+        </div>
+
+        <div class="col-md-2 col-md-offset-2 QuickReference-Container-Titles">
+            <div ng-repeat="item in vm.shortDictionaryList" ng-click="vm.showDetails(item.description)">
+                <div class="QuickReference-Container-Titles-Items">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div ng-show="vm.description" class="QuickReference-Container-Description">
+                <div ng-bind-html="vm.description"></div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="vm.chemicalCompounds">
+        <div class="chemCompounds col-md-8 col-md-offset-2">
+            <table ng-table="vm.tableParams" class="table table-condensed table-bordered table-striped"
+                   show-filter="true">
+                <tr ng-repeat="compound in $data">
+                    <td title="'Name'" filter="{ name: 'text' }" sortable="'name'">
+                        {{compound.name}}
+                    </td>
+                    <td title="'Formula'" filter="{ formula: 'text' }" sortable="'formula'">
+                        {{compound.formula}}
+                    </td>
+                    <td title="'Common Name'" filter="{ commonName: 'text' }" sortable="'commonName'">
+                        {{compound.commonName}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

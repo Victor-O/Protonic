@@ -1,0 +1,128 @@
+<div class="solutionTools">
+
+    <div class="toolsContainer">
+        <div class="shadowBox">
+            <h3 ng-click="vm.extendDilution()">Dilution of a concentrated solution</h3>
+
+            <div ng-show="vm.extendedDilution">
+                <div class="row toolsItem">
+                    <label for="vm.C1" class="col-md-3">Beginning Concentration (Mol)</label>
+                    <input id="vm.C1" ng-model="vm.C1" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.V1" class="col-md-3">Beginning Volume (Liter)</label>
+                    <input id="vm.V1" ng-model="vm.V1" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.C2" class="col-md-3">Ending Concentration (Mol)</label>
+                    <input id="vm.C2" ng-model="vm.C2" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.V2" class="col-md-3">Ending Volume (Liter)</label>
+                    <input id="vm.V2" ng-model="vm.V2" type="number">
+                </div>
+                <div class="toolsItem" ng-show="vm.dillutionMessage">{{vm.dillutionMessage}}</div>
+                <div class="toolsItem">
+                    <button class="btn btn-sm btn-info" ng-click="vm.findC1()">Find Beg Conc</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findV1()">Find Beg Vol</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findC2()">Find End Conc</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findV2()">Find End Vol</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.resetDilution()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+
+        <div class="shadowBox">
+            <h3 ng-click="vm.extendPreparation()">Preparation of a solution</h3>
+
+            <div ng-show="vm.extendedPreparation">
+                <div class="row toolsItem">
+                    <label for="vm.volume" class="col-md-3">Volume (mL)</label>
+                    <input id="vm.volume" ng-model="vm.volume" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.concentration" class="col-md-3">Concentration (Mol)</label>
+                    <input id="vm.concentration" ng-model="vm.concentration" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.mass" class="col-md-3">Mass (mg)</label>
+                    <input id="vm.mass" ng-model="vm.mass" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.moleculeWeight" class="col-md-3">Molecule Weight (g/Mol)</label>
+                    <input id="vm.moleculeWeight" ng-model="vm.moleculeWeight" type="number">
+                </div>
+                <div class="toolsItem" ng-show="vm.preparationMessage">{{vm.preparationMessage}}</div>
+                <div class="toolsItem">
+                    <button class="btn btn-sm btn-info" ng-click="vm.findVolume()">Find Volume</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findConcentration()">Find Concentration</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findMass()">Find Mass</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findMoleculeWeight()">Find Molecule Weight</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.resetPreparation()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="shadowBox">
+            <h3 ng-click="vm.extendMolarity()">Molarity</h3>
+
+            <div ng-show="vm.extendedMolarity">
+                <div class="row toolsItem">
+                    <label for="vm.molecularMass" class="col-md-3">Molecular mass (g/Mol)</label>
+                    <input id="vm.molecularMass" ng-model="vm.molecularMass" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.sampleWeight" class="col-md-3">Sample weight (g)</label>
+                    <input id="vm.sampleWeight" ng-model="vm.sampleWeight" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.molarityVolume" class="col-md-3">Volume (Liter)</label>
+                    <input id="vm.molarityVolume" ng-model="vm.molarityVolume" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.molarity" class="col-md-3">Molarity (M)</label>
+                    <input id="vm.molarity" ng-model="vm.molarity" type="number">
+                </div>
+                <div class="toolsItem" ng-show="vm.molarityMessage">{{vm.molarityMessage}}</div>
+                <div class="toolsItem">
+                    <button class="btn btn-sm btn-info" ng-click="vm.findSampleWeight()">Find Sample Weight</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findMolarityVolume()">Find Volume</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.findMolarity()">Find Molarity</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.resetMolarity()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="shadowBox">
+            <h3 ng-click="vm.extendVolume()">Volume percent</h3>
+
+            <div ng-show="vm.extendedVolume">
+                <div class="row toolsItem">
+                    <label for="vm.soluteVolume" class="col-md-3">Solute volume (ml)</label>
+                    <input id="vm.soluteVolume" ng-model="vm.soluteVolume" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="vm.solutionVolume" class="col-md-3">Solution volume (ml)</label>
+                    <input id="vm.solutionVolume" ng-model="vm.solutionVolume" type="number">
+                </div>
+                <div class="row toolsItem">
+                    <label for="" class="col-md-3">Volume percent (v/v %)</label>
+                    <span ng-show="vm.volumePercent">{{vm.volumePercent}} %</span>
+                </div>
+                <div class="toolsItem" ng-show="vm.volumePercentMessage">{{vm.volumePercentMessage}}</div>
+                <div class="toolsItem">
+                    <button class="btn btn-sm btn-info" ng-click="vm.findVolumePercent()">Find Volume Percent</button>
+                    <button class="btn btn-sm btn-info" ng-click="vm.resetVolumePercent()">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

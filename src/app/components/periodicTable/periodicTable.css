@@ -1,0 +1,140 @@
+.PeriodicTable {
+    min-height: 700px; }
+.PeriodicTable .tableExtendedContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+.PeriodicTable .tableExtendedContainer .emptySpace {
+    -ms-flex-preferred-size: 5%;
+    flex-basis: 5%; }
+.PeriodicTable .tableExtendedContainer .buttons-container {
+    -ms-flex-preferred-size: 10%;
+    flex-basis: 10%;
+    max-height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+.PeriodicTable .tableExtendedContainer .buttons-container .buttons-row {
+    padding: 5px; }
+.PeriodicTable .tableExtendedContainer .buttons-container .buttons-item {
+    max-width: 100px;
+    white-space: normal; }
+.PeriodicTable .tableExtendedContainer .tableContainer {
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%; }
+.PeriodicTable .tableExtendedContainer .tableContainer .elements-row {
+    max-height: 65px; }
+.PeriodicTable .tableExtendedContainer .tableContainer .elements-row .chemicalElement {
+    padding: 3px;
+    width: 65px;
+    height: 65px;
+    min-height: 65px;
+    min-width: 65px;
+    display: inline-block; }
+.PeriodicTable .tableExtendedContainer .tableContainer .elements-row .chemicalElement .elementAtomicNumber {
+    font-size: 8px; }
+.PeriodicTable .tableExtendedContainer .tableContainer .elements-row .chemicalElement .elementSymbol {
+    font-size: 12px; }
+.PeriodicTable .tableExtendedContainer .tableContainer .elements-row .chemicalElement .elementWeight {
+    font-size: 8px; }
+.PeriodicTable .tableExtendedContainer .tableContainer .elements-row .chemicalElement .elementElectronConf {
+    font-size: 5px; }
+.PeriodicTable .tableExtendedContainer .legendContainer {
+    -ms-flex-preferred-size: 20%;
+    flex-basis: 20%; }
+.PeriodicTable .tableExtendedContainer .legendContainer .legend {
+    left: 30px;
+    top: 30px;
+    width: 220px; }
+.PeriodicTable .tableExtendedContainer .legendContainer .legend .legend-item {
+    padding: 5px;
+    margin: 5px; }
+
+.elementFullDetails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+.nonmetal {
+    background-color: #BDFAB6; }
+
+.nobleGas {
+    background-color: #B6F5FA; }
+
+.alkaliMetal {
+    background-color: #C4B9B9; }
+
+.alkalineEarthMetal {
+    background-color: #E6B5B5; }
+
+.metalloid {
+    background-color: #F0FAB6; }
+
+.halogen {
+    background-color: #B6FAE6; }
+
+.transitionMetal {
+    background-color: #FAB6B6; }
+
+.transactinide {
+    background-color: #FADAB6; }
+
+.lanthanide {
+    background-color: #E89292; }
+
+.actinide {
+    background-color: #DE7E7E; }
+
+.metal {
+    background-color: #FAC6B6; }
+
+.solid {
+    background-color: #9C9C9C; }
+
+.gas {
+    background-color: #DEDEDE; }
+
+.artificial {
+    background-color: #F5F5F5; }
+
+.liquid {
+    background-color: #BEBEBE; }
+
+.electronegativity01 {
+    background-color: #DBE6E0; }
+
+.electronegativity12 {
+    background-color: #B4D7BF; }
+
+.electronegativity23 {
+    background-color: #96C8A2; }
+
+.electronegativity34 {
+    background-color: #79A888; }
+
+.electroconfig {
+    background-color: #F6C9CC; }
+
+@media (max-width: 1600px) {
+    .PeriodicTable .tableExtendedContainer .buttons-container .buttons-item {
+        max-width: 110px; }
+    .PeriodicTable .tableExtendedContainer .tableContainer .elements-row {
+        max-height: 58px; }
+    .PeriodicTable .tableExtendedContainer .tableContainer .elements-row .chemicalElement {
+        width: 50px;
+        min-width: 50px; } }

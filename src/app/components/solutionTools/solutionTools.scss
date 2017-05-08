@@ -1,0 +1,36 @@
+.solutionTools {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .toolsContainer {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .toolsItem {
+    padding: 3px;
+  }
+
+  .shadowBox {
+    padding: 10px;
+    min-width: 550px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+  }
+
+  .shadowBox h3 {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+

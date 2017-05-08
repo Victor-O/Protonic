@@ -1,0 +1,50 @@
+.QuickReference {
+  background-color: lightgray;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  bottom: 0px;
+
+  &-Container {
+    margin-top: 50px;
+
+    &-Titles {
+      cursor: pointer;
+
+      &-Items {
+        color: black;
+        background-color: inherit;
+        padding: 5px;
+        margin: 10px;
+        font-size: larger;
+        border: solid black 1px;
+      }
+
+      &-Items:hover {
+        background-color: gold;
+      }
+    }
+
+    &-Description {
+      color: black;
+      padding: 5px;
+      margin: 10px;
+    }
+
+    &-DetailRow {
+      margin-left: 5px;
+    }
+
+    &-Detail {
+      color: black;
+      padding: 5px;
+      margin: 5px;
+    }
+  }
+  
+  .chemDictionary {
+    .chemDictionaryItem {
+      cursor: pointer;
+    }
+  }
+}

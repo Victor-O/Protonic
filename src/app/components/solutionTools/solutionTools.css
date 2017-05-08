@@ -1,0 +1,24 @@
+.solutionTools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+.solutionTools .toolsContainer {
+    margin-bottom: 20px; }
+.solutionTools h3 {
+    cursor: pointer;
+    outline: none; }
+.solutionTools .toolsItem {
+    padding: 3px; }
+.solutionTools .shadowBox {
+    padding: 10px;
+    min-width: 550px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5); }
+.solutionTools .shadowBox h3 {
+    margin-top: 10px; }

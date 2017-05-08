@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Protonic</title>
+</head>
+<body ng-app="protonic">
+
+    <!--build:css styles/lib.css-->
+    <!--lib css files-->
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bower_components/ng-table/dist/ng-table.css">
+    <!--endbuild-->
+
+    <!--build:css styles/app.css-->
+    <!--css files-->
+    <link rel="stylesheet" href="components/quickReference/quickReference.css">
+    <link rel="stylesheet" href="components/dashboard/dashboard.css">
+    <link rel="stylesheet" href="components/periodicTable/periodicTable.css">
+    <link rel="stylesheet" href="components/solutionTools/solutionTools.css">
+    <link rel="stylesheet" href="components/molecularCalculator/molecularCalculator.css">
+    <link rel="stylesheet" href="components/landingPage/landingPage.css">
+    <!--endbuild-->
+
+    <div ng-include="'components/navbar/navbar.html'"></div>
+
+    <div ui-view></div>
+
+    <!--build:js js/lib.js-->
+    <!--lib js files-->
+    <script src="../../bower_components/lodash/lodash.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="../../bower_components/ng-table/dist/ng-table.js"></script>
+    <script src="../../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <!--<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+    <!--endbuild-->
+
+    <!--build:js js/app.js-->
+    <!--js files-->
+    <script src="components/app.js"></script>
+    <script src="components/dashboard/dashboard.js"></script>
+    <script src="components/navbar/navbar.js"></script>
+    <script src="components/quickReference/quickReference.js"></script>
+    <script src="components/molecularCalculator/molecularCalculator.js"></script>
+    <script src="components/landingPage/landingPage.js"></script>
+    <script src="common/services/quickReferenceService/quickReferenceApi.js"></script>
+    <script src="common/services/quickReferenceService/quickReferenceService.js"></script>
+    <script src="components/periodicTable/periodicTable.js"></script>
+    <script src="components/solutionTools/solutionTools.js"></script>
+    <script src="common/services/periodicTableService/periodicTableApi.js"></script>
+    <script src="common/services/periodicTableService/periodicTableService.js"></script>
+    <script src="common/services/molecularCalculatorService/molecularCalculatorService.js"></script>
+    <!-- inject:templates:js -->
+
+    <!-- endinject -->
+    <!--endbuild-->
+
+</body>
+</html>

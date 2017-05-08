@@ -1,0 +1,34 @@
+{
+  "name": "protonic",
+  "version": "1.0.0",
+  "description": "Proiect dizertatie",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Victor Oancea",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.3",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-filter": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.1",
+    "gulp-useref": "^3.1.2",
+    "gulp-util": "^3.0.7",
+    "jscs": "^2.11.0",
+    "jscs-angular": "^2.0.0",
+    "yargs": "^6.4.0"
+  }
+}

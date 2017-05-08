@@ -1,0 +1,53 @@
+.dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-shadowBox {
+  cursor: pointer;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.5);
+}
+
+.dashboard-redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 220px;
+}
+
+.dashboard-redirect:hover {
+  background-color: lightblue;
+}
+
+@media screen and (max-width: 1280px) {
+  .dashboard-redirect {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .dashboard {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .dashboard {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard {
+    flex-direction: column;
+  }
+}

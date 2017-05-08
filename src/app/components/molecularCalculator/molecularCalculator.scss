@@ -1,0 +1,82 @@
+.molecularCalculator {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .molecularCalculatorContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .inputContainer {
+      flex-basis: 60%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      .formulaInput {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+
+        .formulaTitle {
+          font-size: 18px;
+          padding: 16px;
+        }
+
+        .inputRow {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          #inputValue {
+            font-size: 16px;
+            height: 35px;
+            width: 350px;
+            border-radius: 8px;
+            margin-right: 16px;
+          }
+
+          button {
+            max-height: 35px;
+          }
+        }
+
+        .showError {
+          color: red;
+          font-weight: 600;
+        }
+        .hideError {
+          color: white;
+        }
+      }
+    }
+
+    .infoContainer {
+      flex-basis: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .infoTitle {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 16px;
+      }
+      .infoLine {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+    }
+
+
+  }
+}
+
+
+
+
+
